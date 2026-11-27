@@ -1,0 +1,7 @@
+{"shots": [
+ {"shot_id": "1-1", "shot_size": "medium", "asset_keys": ["char:alice|main", "char:bob|main", "scene:cafe|camA"],
+  "dialogue": [{"speaker": "Alice", "text": "You came back.", "start": 0.5, "end": 2.0}]},
+ {"shot_id": "1-2", "shot_size": "medium", "asset_keys": ["char:alice|main", "char:bob|main", "scene:cafe|camB"],
+  "dialogue": [{"speaker": "Bob", "text": "No.", "start": 0.2, "end": 0.6}]},
+ {"shot_id": "1-3", "shot_size": "close-up", "asset_keys": ["char:alice|main", "scene:cafe|camC"], "opening": "She sips from a Starbucks cup."}
+]}
