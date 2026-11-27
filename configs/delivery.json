@@ -1,0 +1,22 @@
+{
+ "about": "交付标准档。成片质检 seedark_qc.video_qc 按档检查；分镜字幕检查用 subtitles。数字来源见 sources。",
+ "default": "mobile",
+ "profiles": {
+  "mobile": {"name": "手机 / 网络平台（TikTok、YouTube、短剧平台）",
+   "loudness": {"integrated_lufs": -16.0, "tolerance_lu": 1.0, "true_peak_dbtp": -1.0, "measure": "整片积分响度 EBU R128"},
+   "subtitles": {"max_lines": 2, "max_chars_per_line": 42, "max_cps": 17, "min_duration_sec": 0.833}},
+  "streaming": {"name": "Netflix 类流媒体",
+   "loudness": {"dialog_gated_lkfs": -27.0, "tolerance_lu": 2.0, "true_peak_dbtp": -2.0, "integrated_proxy_lufs": -24.0,
+     "measure": "规范要求按对白门控（ITU-R BS.1770-1 对白门控表）；ffmpeg 没有对白门控，本工具用整片 -24 LUFS 近似并提示人工复测"},
+   "subtitles": {"max_lines": 2, "max_chars_per_line": 42, "max_cps": 17, "min_duration_sec": 0.833}}
+ },
+ "pse": {"max_flashes_per_sec": 3, "min_luma_delta": 20, "dark_side_max_luma": 200, "area_frac": 0.25,
+  "note": "近似 Harding：4×4 网格逐帧亮度，相反方向的大亮度变化算一次闪；≥25% 面积同时闪才算；饱和红色切换单独计。正式发行仍要用认证 PSE 设备复测。"},
+ "qc": {"black_min_sec": 0.12, "freeze_min_sec": 1.5, "flash_frame_max_frames": 2},
+ "sources": {
+  "netflix_loudness": "https://backlothelp.netflix.com/hc/en-us/articles/360001794307",
+  "netflix_ttsg": "https://backlothelp.netflix.com/hc/en-us/articles/215758617",
+  "pse_ofcom": "https://www.pinsentmasons.com/out-law/news/bbc-broke-epilepsy-rule-with-flashing-olympics-logo-rules-ofcom",
+  "pse_itu_bt1702": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.1702-0-200502-I!!PDF-E.pdf"
+ }
+}
