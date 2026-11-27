@@ -1,0 +1,2 @@
+{"scene_type": "dialogue",
+ "cameras": {"A": {"facing_deg": 0, "lens_mm": 35}, "B": {"facing_deg": 10, "lens_mm": 40}, "C": {"facing_deg": 150, "lens_mm": 85}}}
