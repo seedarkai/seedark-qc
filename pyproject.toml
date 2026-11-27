@@ -1,0 +1,15 @@
+[project]
+name = "seedark-qc"
+version = "0.1.0"
+description = "Review, QC and rework-task toolkit for AI film & short-drama production"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+authors = [{name = "SEEDARK LIMITED"}]
+
+[project.scripts]
+seedark-video-qc = "seedark_qc.video_qc:main"
+seedark-script-check = "seedark_qc.report:main"
+
+[tool.setuptools]
+packages = ["seedark_qc"]
